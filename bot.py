@@ -2,9 +2,9 @@ import token
 from discord.ext import commands
 import os
 import discord
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
-load_dotenv()
+load_dotenv(find_dotenv())
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='!',help_command=None,intents=intents)
