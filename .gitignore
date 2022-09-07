@@ -1,0 +1,9 @@
+.venv
+\venv
+.env
+env
+\__pycache__
+cogs\__pycache__
+__pycache__
+databases/
+databases
