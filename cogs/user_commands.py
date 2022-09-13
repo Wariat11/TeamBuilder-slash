@@ -141,7 +141,7 @@ class UserCommands(commands.Cog):
     @commands.slash_command(name = "update_class",description = "Update a class")
     async def update_class(self, ctx,
                            name:Option(str,"name",required=True,),
-                           _class:Option(str,"Class",required=True)):
+                           _class:Option(str,"Class",required=True,autocomplete=get_classes)):
         try:
             organize_person = [i[3] for i in await db.get_date_time(self,ctx)][0]
             for index in await db.check_party(self,ctx):
